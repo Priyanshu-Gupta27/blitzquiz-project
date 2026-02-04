@@ -1,0 +1,104 @@
+.footer {
+    background: var(--background);
+    color: var(--foreground);
+    border-top: 1px solid var(--border-custom);
+}
+
+.ctaSection {
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.ctaTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.ctaSubtitle {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    background: var(--foreground);
+    color: var(--background);
+    padding: 0.625rem 2rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.bottomBar {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-custom);
+}
+
+.bottomContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.copyright,
+.credit {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.credit {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.fLink {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.fLink:hover {
+    color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+    .bottomContent {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footerLinks {
+        gap: 1.5rem;
+    }
+
+    .ctaTitle {
+        font-size: 2rem;
+    }
+}

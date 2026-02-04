@@ -1,0 +1,121 @@
+.navbar {
+    position: relative;
+    height: 64px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-custom);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--foreground);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.center {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLink:hover {
+    color: var(--foreground);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid var(--border-custom);
+}
+
+.iconBtn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.iconBtn:hover {
+    color: var(--foreground);
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.signIn {
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.signIn:hover {
+    opacity: 0.8;
+}
+
+.signUp {
+    background: var(--foreground);
+    color: var(--background);
+    text-decoration: none;
+    padding: 0.4rem 0.875rem;
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.signUp:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+
+    .center,
+    .icons {
+        display: none;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+}
