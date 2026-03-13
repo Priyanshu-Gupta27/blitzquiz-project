@@ -1,0 +1,21 @@
+{
+    "name": "blitzquiz-backend",
+    "private": true,
+    "scripts": {
+        "dev:api": "bun --cwd apps/api dev",
+        "dev:live": "bun --cwd apps/liveContest dev",
+        "build": "bun run build:db && bun run build:api && bun run build:live",
+        "build:db": "bun --cwd packages/database build",
+        "build:api": "bun --cwd apps/api build",
+        "build:live": "bun --cwd apps/liveContest build",
+        "db:generate": "bun --cwd packages/database prisma generate",
+        "db:push": "bun --cwd packages/database prisma db push"
+    },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "devDependencies": {
+        "turbo": "latest"
+    }
+}

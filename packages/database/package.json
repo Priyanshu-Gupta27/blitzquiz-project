@@ -1,0 +1,17 @@
+{
+    "name": "@blitzquiz/database",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
+    "scripts": {
+        "generate": "npx prisma generate",
+        "push": "npx prisma db push"
+    },
+    "dependencies": {
+        "@prisma/client": "5.15.0"
+    },
+    "devDependencies": {
+        "prisma": "5.15.0",
+        "typescript": "latest"
+    }
+}
