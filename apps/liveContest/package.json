@@ -1,12 +1,11 @@
 {
   "name": "live-contest",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/src/index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "node .next/standalone/server.js",
-    "lint": "next lint"
+    "dev": "npx ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/src/index.js"
   },
   "dependencies": {
     "@blitzquiz/database": "*",
