@@ -1,12 +1,25 @@
 {
   "$schema": "https://railway.com/railway.schema.json",
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "npm install && npm run build --workspace=api"
-  },
-  "deploy": {
-    "startCommand": "node apps/api/dist/index.js",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 3
+  "services": {
+    "live-contest": {
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install && npm run build --workspace=live-contest"
+      },
+      "deploy": {
+        "startCommand": "npm start --workspace=live-contest",
+        "restartPolicyType": "ON_FAILURE"
+      }
+    },
+    "api": {
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install && npm run build --workspace=api"
+      },
+      "deploy": {
+        "startCommand": "npm start --workspace=api",
+        "restartPolicyType": "ON_FAILURE"
+      }
+    }
   }
 }

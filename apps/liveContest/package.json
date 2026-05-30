@@ -1,24 +1,25 @@
 {
-    "name": "live-contest",
-    "version": "1.0.0",
-    "main": "src/index.ts",
-    "scripts": {
-        "dev": "tsc -w",
-        "build": "tsc",
-        "start": "node dist/index.js"
-    },
-    "dependencies": {
-        "@blitzquiz/database": "*",
-        "ioredis": "latest",
-        "jsonwebtoken": "latest",
-        "node-cron": "latest",
-        "ws": "latest"
-    },
-    "devDependencies": {
-        "@types/jsonwebtoken": "latest",
-        "@types/node-cron": "latest",
-        "@types/ws": "latest",
-        "@types/node": "latest",
-        "typescript": "latest"
-    }
+  "name": "live-contest",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@blitzquiz/database": "*",
+    "ioredis": "latest",
+    "jsonwebtoken": "latest",
+    "node-cron": "latest",
+    "ws": "latest"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "latest",
+    "@types/node-cron": "latest",
+    "@types/ws": "latest",
+    "@types/node": "latest",
+    "typescript": "latest"
+  }
 }
