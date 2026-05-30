@@ -70,7 +70,7 @@ wss.on('connection', async (ws: WebSocket, req: http.IncomingMessage) => {
     })
 })
 
-const PORT = process.env.WS_PORT || 8080
-server.listen(PORT, () => {
+const PORT = process.env.PORT || 8080
+server.listen(Number(PORT), '0.0.0.0', () => {
     console.log(`WebSocket server running on port ${PORT}`)
 })
